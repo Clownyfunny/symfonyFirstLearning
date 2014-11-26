@@ -25,6 +25,12 @@ class NewsType extends AbstractType
             'required' => true,
             'label' => 'Content'
         ]);
+        $builder->add('author', 'entity', [
+            'class' => 'Cergy\UsersBundle\Entity\User',
+            'property' => 'username',
+            'required' => true,
+            'label' => 'Author'
+        ]);
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

@@ -22,7 +22,7 @@
         </ul>
     {% endif %}
     {% for aNews in news %}
-       <fieldset><legend>{{ aNews.title }}</legend>
+       <fieldset><legend>{{ aNews.title }} - By {{ aNews.author }}</legend>
         <p>{{ aNews.content }}</p>
         <p>{{ aNews.createdAt|date }}</p></fieldset>
     {% endfor %}

@@ -4,7 +4,7 @@ imports:
 
 framework:
     #esi:             ~
-    #translator:      { fallback: "%locale%" }
+    translator:      { fallback: "%locale%" }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -76,3 +76,7 @@ stof_doctrine_extensions:
   orm :
     default:
       timestampable: true
+fos_user:
+  user_class: Cergy\UsersBundle\Entity\User
+  db_driver: orm
+  firewall_name: secured_area
