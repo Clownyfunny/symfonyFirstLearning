@@ -19,7 +19,10 @@ class AppKernel extends Kernel
             new Cergy\NewsBundle\CergyNewsBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Cergy\UsersBundle\CergyUsersBundle(),
-            new \FOS\UserBundle\FOSUserBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new FOS\RestBundle\FOSRestBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
+            new Cergy\ApiBundle\CergyApiBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

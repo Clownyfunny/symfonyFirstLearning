@@ -5,11 +5,14 @@ namespace Cergy\NewsBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Behavior;
+use JMS\Serializer\Annotation\ExclusionPolicy;
+use JMS\Serializer\Annotation\Expose;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="news")
  * @author Clownyfunny
+ * @ExclusionPolicy("all")
  */
 
 class News
@@ -22,10 +25,12 @@ class News
     private $id;
     /**
      * @ORM\Column(type="string", length=100)
+     * @Expose()
      */
     private $title;
     /**
      * @ORM\Column(type="text")
+     * @Expose()
      */
     private $content;
 
@@ -44,6 +49,7 @@ class News
     /**
      * @ORM\ManyToOne(targetEntity="Cergy\UsersBundle\Entity\User", inversedBy="news")
      * @ORM\JoinColumn(name="author_id", referencedColumnName="id", nullable=false)
+     * @Expose()
      */
 
     private $author;

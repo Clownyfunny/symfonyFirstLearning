@@ -72,11 +72,23 @@ swiftmailer:
     spool:     { type: memory }
 
 stof_doctrine_extensions:
-  default_locale: %locale%
-  orm :
-    default:
-      timestampable: true
+    default_locale: %locale%
+    orm :
+        default:
+            timestampable: true
 fos_user:
-  user_class: Cergy\UsersBundle\Entity\User
-  db_driver: orm
-  firewall_name: secured_area
+    user_class: Cergy\UsersBundle\Entity\User
+    db_driver: orm
+    firewall_name: secured_area
+
+fos_rest:
+    routing_loader:
+        default_format: json
+
+jms_serializer:
+    metadata:
+        auto_detection: true
+        directories:
+            FOSUserBundle:
+                namespace_prefix: "FOS\\UserBundle"
+                path: "@CergyUsersBundle/Resources/config/serializer/"

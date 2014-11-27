@@ -1,3 +1,8 @@
+cergy_api_news:
+    resource: "@CergyApiBundle/Controller/NewsController.php"
+    type:     rest
+    prefix:   /api
+
 cergy_users:
     resource: "@CergyUsersBundle/Controller/"
     type:     annotation

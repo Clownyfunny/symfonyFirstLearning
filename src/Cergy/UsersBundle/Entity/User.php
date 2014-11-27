@@ -4,11 +4,13 @@ namespace Cergy\UsersBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation\ExclusionPolicy;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="fos_user")
  * @author Clownyfunny
+ * @ExclusionPolicy("all")
  */
 
 class User extends BaseUser
