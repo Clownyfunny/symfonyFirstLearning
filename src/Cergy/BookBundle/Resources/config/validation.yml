@@ -1,0 +1,22 @@
+Cergy\BookBundle\Entity\Book:
+    properties:
+        title:
+            - NotBlank: ~
+            - Length:
+                min: 3
+                max: 100
+                minMessage: Trop petit
+                maxMessage: Trop long {{ limit }}
+        description:
+            - NotBlank: ~
+            - Length:
+                min: 10
+                minMessage: Trop petit
+        price:
+            - NotBlank: ~
+            - GreaterThanOrEqual:
+                value: 1
+            - LessThanOrEqual:
+                value: 500
+        category:
+            - NotBlank: ~

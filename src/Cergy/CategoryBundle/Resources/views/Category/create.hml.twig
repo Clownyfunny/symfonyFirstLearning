@@ -1,0 +1,15 @@
+{%  extends '::base.html.twig' %}
+
+{% block body %}
+    <h2>Add Category</h2>
+    <form method="post">
+        <!--print error from form-->
+        <div>
+            {{ form_label(form.label) }}
+            {{ form_widget(form.label, { 'attr' : {'placeholder' : 'label here'}}) }}
+            {{ form_errors(form.label) }}
+        </div>
+        {{ form_rest(form) }}
+        <input type="submit"/>
+    </form>
+{% endblock %}

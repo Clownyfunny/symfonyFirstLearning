@@ -1,5 +1,20 @@
+cergy_category:
+    resource: "@CergyCategoryBundle/Controller/"
+    type:     annotation
+    prefix:   /category
+
+cergy_book:
+    resource: "@CergyBookBundle/Controller/"
+    type:     annotation
+    prefix:   /book
+
 cergy_api_news:
     resource: "@CergyApiBundle/Controller/NewsController.php"
+    type:     rest
+    prefix:   /api
+
+cergy_api_book:
+    resource: "@CergyApiBundle/Controller/BookController.php"
     type:     rest
     prefix:   /api
 

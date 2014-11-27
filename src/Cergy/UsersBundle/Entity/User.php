@@ -26,4 +26,9 @@ class User extends BaseUser
      * @ORM\OneToMany(targetEntity="Cergy\NewsBundle\Entity\News", mappedBy="author")
      */
     protected $news;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Cergy\BookBundle\Entity\Book", mappedBy="author")
+     */
+    protected $book;
 }

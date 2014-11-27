@@ -1,0 +1,40 @@
+<form method="post">
+    <!--print error from form-->
+    <div>
+        {{ form_label(form.title) }}
+        {{ form_widget(form.title, { 'attr' : {'placeholder' : 'title here'}}) }}
+        {{ form_errors(form.title) }}
+    </div>
+
+    <div>
+        {{ form_label(form.description) }}
+        {{ form_widget(form.description, { 'attr' : {'placeholder' : 'content here'}}) }}
+        {{ form_errors(form.description) }}
+    </div>
+
+    <div>
+        {{ form_label(form.price) }}
+        {{ form_widget(form.price, { 'attr' : {'placeholder' : 'price here'}}) }}
+        {{ form_errors(form.price) }}
+    </div>
+
+    <div>
+        {{ form_label(form.publishAt) }}
+        {{ form_widget(form.publishAt) }}
+        {{ form_errors(form.publishAt) }}
+    </div>
+
+    <div>
+        {{ form_label(form.author) }}
+        {{ form_widget(form.author) }}
+        {{ form_errors(form.author) }}
+    </div>
+
+    <div>
+        {{ form_label(form.category) }}
+        {{ form_widget(form.category) }}
+        {{ form_errors(form.category) }}
+    </div>
+    {{ form_rest(form) }}
+    <input type="submit"/>
+</form>
